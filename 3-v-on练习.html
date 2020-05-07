@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="btnClick">点击我显示图片</button>
+        <img v-bind:src="src" alt="" >
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            src:""
+        },
+        methods:{
+            btnClick:function(){
+                this.src = "http://img1.imgtn.bdimg.com/it/u=1568717602,365947581&fm=26&gp=0.jpg"
+            }
+        },
+    })
+</script>
+</html>
